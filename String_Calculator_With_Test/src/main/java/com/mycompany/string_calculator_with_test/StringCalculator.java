@@ -15,8 +15,13 @@ public class StringCalculator {
         if (str.isEmpty()){
             return 0;
         }        
+        Integer sum =0;
+        String[] numbers = str.split("[^-0123456789]");
+        for (String number : numbers) {
+            sum += Integer.valueOf(number);
+        }
         
-        return Integer.valueOf(str);
+        return sum;
     }
     
 }

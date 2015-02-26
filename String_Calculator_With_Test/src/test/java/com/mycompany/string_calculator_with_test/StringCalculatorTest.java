@@ -59,4 +59,10 @@ public class StringCalculatorTest {
         assertEquals(2, calc.add("2"));
     }
     
+    @Test
+    public void executeShouldReturnSumOfTheGivenNumbers(){
+        assertEquals(3, calc.add("1,2"));
+        assertEquals(14, calc.add("10,4"));
+    }
+    
 }
