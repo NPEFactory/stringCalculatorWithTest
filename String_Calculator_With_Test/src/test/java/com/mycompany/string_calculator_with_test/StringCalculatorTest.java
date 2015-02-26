@@ -107,10 +107,15 @@ public class StringCalculatorTest {
     public ExpectedException exception = ExpectedException.none();
 
     @Test
-    public void shouldThrowRuntimeExceptionWhenNegativesInTheString() {
+    public void shouldThrowRuntimeExceptionWhenNegativesInTheString1() throws NegativesNotAllowed {
+            exception.expect(NegativesNotAllowed.class);
+            exception.expectMessage("-3,-5");
+            calc.add("1,-3,2,-5");
+    }
+    
+    @Test
+    public void shouldThrowRuntimeExceptionWhenNegativesInTheString2() {
         try {
-//            exception.expect(NegativesNotAllowed.class);
-//            exception.expectMessage("-3,-5");
             calc.add("1,-3,2,-5");
             fail("failed to drop the exeption...");
         } catch (Exception ex) {
