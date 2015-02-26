@@ -70,4 +70,12 @@ public class StringCalculatorTest {
         assertEquals(10, calc.add("1,3,1,5"));
         assertEquals(35, calc.add("10,4,5,12,4"));
     }
+    
+    @Test
+    public void executeShouldReturnSumOfTheGivenNumbersWithSpecialDelimitters(){
+        assertEquals(3, calc.add("1;2"));
+        assertEquals(8, calc.add("3\n5"));
+        assertEquals(6, calc.add("4\t2"));
+        assertEquals(11, calc.add("6|5"));
+    }
 }
