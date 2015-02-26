@@ -11,6 +11,11 @@ package com.mycompany.string_calculator_with_test;
  */
 public class StringCalculator {
     
-    
+    public int add(String str){
+        if (str.isEmpty()){
+            return 0;
+        }        
+        return 0;
+    }
     
 }
