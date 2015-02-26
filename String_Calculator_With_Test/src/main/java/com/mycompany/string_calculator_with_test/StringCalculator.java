@@ -15,7 +15,8 @@ public class StringCalculator {
         if (str.isEmpty()){
             return 0;
         }        
-        return 0;
+        
+        return Integer.valueOf(str);
     }
     
 }

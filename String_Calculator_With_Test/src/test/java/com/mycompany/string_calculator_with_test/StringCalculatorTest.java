@@ -53,4 +53,10 @@ public class StringCalculatorTest {
         assertEquals(0, calc.add(""));
     }
     
+    @Test
+    public void executeShouldReturnTheGivenNumber(){
+        assertEquals(1, calc.add("1"));
+        assertEquals(2, calc.add("2"));
+    }
+    
 }
