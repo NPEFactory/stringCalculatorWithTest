@@ -60,9 +60,14 @@ public class StringCalculatorTest {
     }
     
     @Test
-    public void executeShouldReturnSumOfTheGivenNumbers(){
+    public void executeShouldReturnSumOfTheGivenTwoNumbers(){
         assertEquals(3, calc.add("1,2"));
         assertEquals(14, calc.add("10,4"));
     }
     
+    @Test
+    public void executeShouldReturnSumOfTheGivenNumbers(){
+        assertEquals(10, calc.add("1,3,1,5"));
+        assertEquals(35, calc.add("10,4,5,12,4"));
+    }
 }
